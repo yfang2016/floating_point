@@ -1,0 +1,10 @@
+A floating point algorithm
+
+  EEEEEEEESFFFFFFFFFFFFFFFFFFFFFFF (32 bits)
+
+  E: exponent, 8bit, 2's complement
+  S: sign bit
+  F: fraction, 0.1XXXXX, true form.
+
+    0000 0011 1011 0010 0000 0000 0000 0000
+  = 2^3 x (-1) x 0.011001 = -3.125

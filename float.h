@@ -24,4 +24,8 @@ typedef struct {
     char exp: 8;
 } Float;
 
+Float add(Float, Float);
+Float sub(Float, Float);
+Float mul(Float, Float);
+
 #endif

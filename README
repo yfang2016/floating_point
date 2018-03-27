@@ -6,5 +6,24 @@ A floating point algorithm
   S: sign bit
   F: fraction, 0.XXXXX......, true form.
 
-    0000 0011 1011 0010 0000 0000 0000 0000
-  = 2^3 x (-1) x 0.011001 = -3.125
+-12.567 + 34.069 = 21.502:
+    exp=5, frac=56020C=0.10101100000001000001100
+  = 21.5019989
+
+-12.567 - 34.069 = -46.636:
+    exp=6, frac=DD45A2=1.10111010100010110100010
+  = -46.6360015869
+
+
+-12.567 + 12.569 = 0.002
+    exp=-8, frac=41800=0.10000011000
+  = 0.0019989
+
+-12.567 * 12.569 = -157.954623
+    exp=8, frac=CEFA31=1.10011101111101000110001
+  = -157.95462036
+
+Known Bugs:
+    exponent may overflow
+    fractions must be normalized(esp. for multiplication)
+    LSB 8 bit multiplication is ignored, this leads to error

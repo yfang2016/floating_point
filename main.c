@@ -48,10 +48,6 @@ int main (int argc, char *argv[])
     x2.exp = 6;
     x2.frac = 0b010001000010001101010100;
 
-    /* x2 = 12.569=1100.100100011010101*/
-     x2.exp = 4;
-     x2.frac = 0b011001001000110101010000;
-
     x3 = add(x1, x2);
     printf("exp:%d, frac: %06X\n", x3.exp, x3.frac);
 

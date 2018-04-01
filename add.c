@@ -34,9 +34,6 @@ Float add(Float a, Float b)
     int frac_a = a.frac;
     int frac_b = b.frac;        /* 24bit->32bit, avoid overflow */
 
-    printf("%d %x\n", a.exp, a.frac);
-    printf("%d %x\n", b.exp, b.frac);
-
     frac_a = comp24(frac_a);
     frac_b = comp24(frac_b);
 
@@ -53,8 +50,6 @@ Float add(Float a, Float b)
         return a;                 /* return ZERO */
     }
     
-    printf("%d %x\n", a.exp, a.frac);
-    printf("%d %x\n", b.exp, b.frac);
     sign = frac_a & 0x80000000;   /* get sign bit */
     if(sign) {
         frac_a = (~frac_a) + 1;   /* convert 2's complement to true form */
